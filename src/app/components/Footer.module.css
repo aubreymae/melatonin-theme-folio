@@ -1,0 +1,11 @@
+.outer-footer {
+  margin-top: auto;
+  border-top: solid 1px var(--gray-100);
+}
+
+.footer {
+  justify-content: space-between;
+  padding: var(--pad-md) 0px;
+  font-family: var(--font-ibm-plex-mono);
+  text-transform: uppercase;
+}

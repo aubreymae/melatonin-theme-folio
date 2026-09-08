@@ -1,0 +1,22 @@
+.outer-header {
+  border-bottom: solid 1px var(--gray-100);
+}
+
+.header {
+  justify-content: space-between;
+  padding: var(--pad-md) 0px;
+}
+
+.amg-logo {
+  font-family: var(--font-archivo);
+  font-weight: 600;
+}
+
+.nav-menu-items {
+  --gap: 2rem;
+  flex-direction: row;
+}
+
+.nav-menu-items li {
+  list-style-type: none;
+}

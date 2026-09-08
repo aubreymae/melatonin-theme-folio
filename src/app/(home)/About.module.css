@@ -1,0 +1,35 @@
+.about-section {
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: space-between;
+}
+
+.about-intro {
+  --gap: var(--gap-md);
+  flex-direction: column;
+}
+
+.about-details {
+  --gap: 0px;
+  flex-direction: column;
+}
+
+.about-details ul {
+  padding: 0;
+  border: solid 1px var(--gray-100);
+}
+
+.about-details ul li {
+  list-style-type: none;
+}
+
+.about-detail-item {
+  --gap: 0.5rem;
+  flex-direction: column;
+  padding: var(--pad-md);
+}
+
+.about-details ul li:not(:last-child) {
+  border-bottom: solid 1px var(--gray-100);
+}
