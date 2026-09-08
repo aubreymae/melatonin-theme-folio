@@ -1,3 +1,5 @@
+/* RESET */
+
 /* 1. Use a more-intuitive box-sizing model */
 *,
 *::before,
@@ -18,10 +20,17 @@
 }
 
 body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+
   /* 4. Increase line-height */
   line-height: 1.5;
   /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
+
+  font-family: var(--font-lora);
 }
 
 /* 6. Improve media defaults */
@@ -72,4 +81,24 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+/* CSS VARIABLES */
+:root {
+  --pad-sm: 0.5rem;
+  --pad-md: 1rem;
+  --pad-lg: 2rem;
+  --pad-xl: 4rem;
+
+  --gap-sm: 0.5rem;
+  --gap-md: 1rem;
+  --gap-lg: 2rem;
+  --gap-xl: 4rem;
+}
+
+/* COLORS */
+:root {
+  --gray-100: #e2e2e2;
+
+  --red-100: #fdf7f7;
 }

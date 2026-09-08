@@ -1,0 +1,46 @@
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.grid-col-4 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.grid-col-3 {
+  grid-column-start: 5;
+  grid-column-end: 8;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.btm-margin {
+  margin-bottom: 5rem;
+}
+
+/* typography */
+.archivo {
+  font-family: var(--font-archivo);
+}
+
+.lora {
+  font-family: var(--font-lora);
+}
+
+.ibm-plex-mono {
+  font-family: var(--font-ibm-plex-mono);
+}
+
+.uppercase-text {
+  text-transform: uppercase;
+}
