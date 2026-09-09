@@ -1,5 +1,6 @@
 .about-section {
-  grid-template-columns: repeat(7, 1fr);
+  gap: 1.25rem;
+  grid-template-columns: repeat(10, 1fr);
   grid-template-rows: 1fr;
   align-items: center;
   justify-items: space-between;
@@ -8,6 +9,10 @@
 .about-intro {
   --gap: var(--gap-md);
   flex-direction: column;
+}
+
+.about-title {
+  font-size: 3rem;
 }
 
 .about-details {
@@ -28,6 +33,10 @@
   --gap: 0.5rem;
   flex-direction: column;
   padding: var(--pad-md);
+}
+
+.about-desc {
+  font-size: 1.25rem;
 }
 
 .about-details ul li:not(:last-child) {
