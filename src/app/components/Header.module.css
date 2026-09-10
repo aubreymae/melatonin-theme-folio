@@ -8,6 +8,7 @@
 }
 
 .amg-logo {
+  font-size: 1rem;
   font-family: var(--font-archivo);
   font-weight: 600;
 }
@@ -18,5 +19,7 @@
 }
 
 .nav-menu-items li {
+  font-size: 1rem;
+  text-transform: uppercase;
   list-style-type: none;
 }

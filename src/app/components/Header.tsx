@@ -6,7 +6,7 @@ export default function Header() {
       <div className={`${styles["header"]} container flex`}>
         <div className={styles["amg-logo"]}>amg</div>
         <nav>
-          <ul className={`${styles["nav-menu-items"]} flex`}>
+          <ul className={`${styles["nav-menu-items"]} flex ibm-plex-mono`}>
             <li>Work</li>
             <li>Resume</li>
             <li>Contact</li>
