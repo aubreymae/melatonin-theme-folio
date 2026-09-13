@@ -5,12 +5,10 @@ import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <>
-      <main className="container">
-        <About />
-        <SelectedWorks />
-        <Experience />
-      </main>
-    </>
+    <main className="container">
+      <About />
+      <SelectedWorks />
+      <Experience />
+    </main>
   );
 }

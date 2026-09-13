@@ -1,0 +1,48 @@
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .work-card {
+    --gap: var(--gap-md);
+    flex-direction: column;
+    flex: 1;
+    padding: var(--pad-md);
+    border: solid 1px var(--gray-100);
+  }
+
+  .work-card-content {
+    --gap: var(--gap-sm);
+    flex-direction: column;
+  }
+}
+
+/* Medium devices (600px–1200px) */
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
+  .work-card {
+    --gap: var(--gap-md);
+    flex-direction: column;
+    flex: 1;
+    padding: var(--pad-md);
+    border: solid 1px var(--gray-100);
+  }
+
+  .work-card-content {
+    --gap: var(--gap-sm);
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .work-card {
+    --gap: var(--gap-md);
+    flex-direction: column;
+    flex: 1;
+    padding: var(--pad-md);
+    border: solid 1px var(--gray-100);
+  }
+
+  .work-card-content {
+    --gap: var(--gap-sm);
+    flex-direction: column;
+  }
+}
