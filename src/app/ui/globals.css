@@ -192,3 +192,8 @@ button {
   font-family: var(--font-ibm-plex-mono);
   text-transform: uppercase;
 }
+
+/* IMAGES */
+img {
+  width: 100%;
+}
