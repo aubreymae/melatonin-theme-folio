@@ -1,0 +1,50 @@
+.exp-section {
+  gap: 1.25rem;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: space-between;
+}
+
+.exp-intro {
+  --gap: var(--gap-md);
+  flex-direction: column;
+}
+
+.exp-details {
+  --gap: var(--gap-sm);
+  flex-direction: column;
+}
+
+.exp-details ul {
+  padding: 0;
+  border-top: solid 1px var(--gray-100);
+  border-bottom: solid 1px var(--gray-100);
+}
+
+.exp-details ul li {
+  list-style-type: none;
+}
+
+.exp-detail-item {
+  --gap: 0.5rem;
+  flex-direction: column;
+  padding: var(--pad-md);
+}
+
+.exp-desc {
+  font-size: 1.25rem;
+}
+
+.exp-details ul li:not(:last-child) {
+  border-bottom: solid 1px var(--gray-100);
+}
+
+.exp-detail-item__company {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.exp-details a {
+  margin-left: var(--pad-md);
+}
