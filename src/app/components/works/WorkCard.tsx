@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./WorkCard.module.css";
 
 // look into turning this into a shared type
@@ -19,14 +20,16 @@ export default function WorkCard({
   image,
 }: WorkCardProps) {
   return (
-    <article className={`${styles["work-card"]} flex`}>
+    <article className={`${styles["work-card"]}`}>
       <img src={image} alt="" />
-      <div className={`${styles["work-card-content"]} flex`}>
+      <div className={`${styles["work-card__content"]}`}>
         <h4>{title}</h4>
         <p className="ibm-plex-mono uppercase-text">{release_status}</p>
         <p>{short_description}</p>
         <div className="lang-tags"></div>
-        <button className="dark-bg light-text">See details</button>
+        <Link href={`/works/${slug}`} className="btn dark-bg light-text">
+          See details
+        </Link>
       </div>
     </article>
   );

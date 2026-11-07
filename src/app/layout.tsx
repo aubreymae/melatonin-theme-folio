@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Archivo, Lora, IBM_Plex_Mono } from "next/font/google";
+import "./ui/reset.css";
 import "./ui/globals.css";
 import "./ui/utils.css";
 

@@ -5,7 +5,7 @@ import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <main className="container">
+    <main className="general-page-layout container">
       <About />
       <SelectedWorks />
       <Experience />

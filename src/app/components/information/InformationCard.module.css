@@ -1,0 +1,14 @@
+.info-card-list {
+  list-style-type: none;
+}
+
+.info-card-label {
+  font-family: var(--font-label);
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+}
+
+.info-card-body {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-medium);
+}

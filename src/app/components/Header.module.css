@@ -1,78 +1,22 @@
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  .header {
-    justify-content: space-between;
-    padding: var(--pad-md) 0px;
-  }
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .amg-logo {
-    font-size: 1.25rem;
-    font-family: var(--font-archivo);
-    font-weight: 600;
-  }
-
-  .nav-menu-items {
-    --gap: 2rem;
-    flex-direction: row;
-  }
-
-  .nav-menu-items li {
-    font-size: 1rem;
-    text-transform: uppercase;
-    list-style-type: none;
-  }
+.header-nav-items {
+  display: flex;
+  list-style-type: none;
 }
 
 /* Medium devices (600px–1200px) */
-@media only screen and (min-width: 600px) and (max-width: 1200px) {
-  .header {
+@media (min-width: 48rem) {
+  .header-wrapper {
+    flex-direction: row;
     justify-content: space-between;
-    padding: var(--pad-lg);
   }
 
-  .amg-logo {
-    font-size: 1rem;
-    font-family: var(--font-archivo);
-    font-weight: 600;
-  }
-
-  .nav-menu-items {
-    --gap: var(--gap-lg);
+  .header-nav-items {
     flex-direction: row;
   }
-
-  .nav-menu-items li {
-    font-size: 1rem;
-    text-transform: uppercase;
-    list-style-type: none;
-  }
-}
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .header {
-    justify-content: space-between;
-    padding: var(--pad-md);
-  }
-
-  .amg-logo {
-    font-size: 1rem;
-    font-family: var(--font-archivo);
-    font-weight: 600;
-  }
-
-  .nav-menu-items {
-    --gap: var(--gap-lg);
-    flex-direction: row;
-  }
-
-  .nav-menu-items li {
-    font-size: 1rem;
-    text-transform: uppercase;
-    list-style-type: none;
-  }
-}
-
-.outer-header {
-  border-bottom: solid 1px var(--gray-100);
 }

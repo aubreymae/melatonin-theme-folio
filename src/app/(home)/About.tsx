@@ -1,43 +1,31 @@
+import InformationCard from "../components/information/InformationCard";
 import styles from "./About.module.css";
+import { personal } from "../data/personal";
 
 export default function About() {
   return (
-    <section className={`${styles["about-section"]} grid btm-margin`}>
-      <div className={`${styles["about-intro"]} grid-col-4 flex`}>
-        <h1 className={`${styles["about-title"]} archivo`}>
-          I build and design products.
-        </h1>
-        <p className={`${styles["about-desc"]}`}>
+    <section className="general-layout">
+      <div className="general-layout__left">
+        <h1>I build and design products.</h1>
+        <p>
           I’m Aubrey Garcia, a developer with equal parts creative and technical
           instinct. At Docebo, I redefine the experience of our learning
           platform for consultants who implement it and the customers who live
           in it.
         </p>
-        <p className={`${styles["about-desc"]}`}>
+        <p>
           Outside of work, I’m pursuing a Master of Science in Computer Science
           focused on Computing Systems. When I’m not coding, you’ll find me
           playing video games, learning guitar, or painting landscapes.
         </p>
       </div>
-      <div className={`${styles["about-details"]} grid-col-3 flex`}>
-        <ul>
-          <li className={`${styles["about-detail-item"]} flex`}>
-            <p className="ibm-plex-mono uppercase-text">Currently</p>
-            <p className="archivo">Solution Designer @ Docebo</p>
-          </li>
-          <li className={`${styles["about-detail-item"]} flex`}>
-            <p className="ibm-plex-mono uppercase-text">Education</p>
-            <p className="archivo">MSCS @ Georgia Tech</p>
-          </li>
-          <li className={`${styles["about-detail-item"]} flex`}>
-            <p className="ibm-plex-mono uppercase-text">Based in</p>
-            <p className="archivo">Toronto, Canada</p>
-          </li>
-          <li className={`${styles["about-detail-item"]} flex`}>
-            <p className="ibm-plex-mono uppercase-text">Open to</p>
-            <p className="archivo">Design & product engineering work</p>
-          </li>
-        </ul>
+      <div className="general-layout__right">
+        <div className="simple-card">
+          <InformationCard label={"Currently"} body={personal.current} />
+          <InformationCard label={"Education"} body={personal.education} />
+          <InformationCard label={"Based in"} body={personal.based_in} />
+          <InformationCard label={"Open to"} body={personal.open_to} />
+        </div>
       </div>
     </section>
   );

@@ -1,32 +1,23 @@
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  .main-work-card {
-    --gap: var(--gap-md);
-    flex-direction: row;
-    align-items: center;
-    padding: var(--pad-md);
-    border: solid 1px var(--gray-100);
-  }
+/* Extra small devices (phones, 600px and down) */
+.main-work-card {
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-sm);
+  border: solid 1px var(--color-border);
+}
+
+.main-work-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
 }
 
 /* Medium devices (600px–1200px) */
-@media only screen and (min-width: 600px) and (max-width: 1200px) {
+@media (min-width: 48rem) {
   .main-work-card {
-    --gap: var(--gap-md);
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    padding: var(--pad-md);
-    border: solid 1px var(--gray-100);
-  }
-}
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .main-work-card {
-    --gap: var(--gap-md);
-    flex-direction: column;
-    align-items: center;
-    padding: var(--pad-md);
-    border: solid 1px var(--gray-100);
+    gap: var(--space-md);
   }
 }

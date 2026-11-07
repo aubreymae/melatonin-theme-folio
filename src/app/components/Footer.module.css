@@ -1,32 +1,13 @@
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  .footer {
-    justify-content: space-between;
-    padding: var(--pad-md) 0px;
-    font-family: var(--font-ibm-plex-mono);
-  }
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Medium devices (600px–1200px) */
-@media only screen and (min-width: 600px) and (max-width: 1200px) {
-  .footer {
+@media (min-width: 48rem) {
+  .footer-wrapper {
+    flex-direction: row;
     justify-content: space-between;
-    padding: var(--pad-lg);
-    font-family: var(--font-ibm-plex-mono);
   }
-}
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .footer {
-    flex-direction: column;
-    align-items: center;
-    padding: var(--pad-md);
-    font-family: var(--font-ibm-plex-mono);
-  }
-}
-
-.outer-footer {
-  margin-top: auto;
-  border-top: solid 1px var(--gray-100);
 }

@@ -7,7 +7,7 @@ export default function SelectedWorks() {
   const featuredWorks = works.filter((work) => work.featured);
 
   return (
-    <section className={`${styles["about-section"]} grid btm-margin`}>
+    <section className={`${styles["general-layout--select-works"]}`}>
       <h2>What I've worked on</h2>
       {featuredWorks.slice(0, 1).map((work) => (
         <MainWorkCard
@@ -20,7 +20,7 @@ export default function SelectedWorks() {
           image={work.image}
         />
       ))}
-      <div className={`${styles["gallery-row"]} flex`}>
+      <div className={`${styles["general-layout--select-works-list"]}`}>
         {featuredWorks.slice(1).map((work) => (
           <WorkCard
             key={work.slug}

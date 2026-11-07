@@ -1,37 +1,27 @@
+import Link from "next/link";
+import InformationCard from "../components/information/InformationCard";
 import styles from "./Experience.module.css";
+import { resume } from "../data/resume";
 
 export default function Experience() {
   return (
-    <section className={`${styles["exp-section"]} grid btm-margin`}>
-      <div className={`${styles["exp-intro"]} grid-col-4 flex`}>
+    <section className="general-layout">
+      <div className="general-layout__left">
         <h2>
           I’ve collaborated with Skillable, CMA CGM, Databricks, Milwaukee, and
           Align Technology to improve the design of their employee and customer
           enablement portals.
         </h2>
       </div>
-      <div className={`${styles["exp-details"]} grid-col-3 flex`}>
-        <ul>
-          <li className={`${styles["exp-detail-item"]} flex`}>
-            <div className={`${styles["exp-detail-item__company"]} flex`}>
-              <p className="ibm-plex-mono uppercase-text">Independent</p>
-              <p className="ibm-plex-mono uppercase-text">2026 - now</p>
-            </div>
-            <p className="archivo">Developer</p>
-          </li>
-          <li className={`${styles["exp-detail-item"]} flex`}>
-            <div className={`${styles["exp-detail-item__company"]} flex`}>
-              <p className="ibm-plex-mono uppercase-text">Docebo</p>
-              <p className="ibm-plex-mono uppercase-text">2025 - now</p>
-            </div>
-            <p className="archivo">Solution Designer</p>
-          </li>
-          <li className={`${styles["exp-detail-item"]} flex`}>
-            <p className="ibm-plex-mono uppercase-text">York University</p>
-            <p className="archivo">Web Designer</p>
-          </li>
-        </ul>
-        <a className="ibm-plex-mono uppercase-text">See full resume</a>
+      <div className="general-layout__right">
+        <div className="simple-card">
+          <InformationCard label={resume[0].company} body={resume[0].title} />
+          <InformationCard label={resume[1].company} body={resume[1].title} />
+          <InformationCard label={resume[2].company} body={resume[2].title} />
+        </div>
+        <Link href="/resume" className="ibm-plex-mono uppercase-text">
+          See full resume
+        </Link>
       </div>
     </section>
   );

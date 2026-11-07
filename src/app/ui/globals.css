@@ -1,196 +1,162 @@
-/* RESET */
-
-/* 1. Use a more-intuitive box-sizing model */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* 2. Remove default margin */
-*:not(dialog) {
-  margin: 0;
-}
-
-/* 3. Enable keyword animations */
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    interpolate-size: allow-keywords;
-  }
-}
-
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  justify-content: flex-start;
-
-  /* 4. Increase line-height */
-  line-height: 1.5;
-  /* 5. Improve text rendering */
-  -webkit-font-smoothing: antialiased;
-
-  font-family: var(--font-lora);
-}
-
-/* 6. Improve media defaults */
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
-/* 7. Inherit fonts for form controls */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* 8. Avoid text overflows */
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
-/* 9. Improve line wrapping */
-p {
-  text-wrap: pretty;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-wrap: balance;
-  font-weight: 500;
-  font-family: var(--font-archivo);
-}
-
-/*
-  10. Create a root stacking context
-*/
-#root,
-#__next {
-  isolation: isolate;
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  /* CSS VARIABLES */
-  :root {
-    --pad-sm: 0.5rem;
-    --pad-md: 1rem;
-    --pad-lg: 2rem;
-    --pad-xl: 4rem;
-
-    --gap-sm: 0.5rem;
-    --gap-md: 1rem;
-    --gap-lg: 2rem;
-    --gap-xl: 4rem;
-  }
-
-  /* TYPOGRAPHY */
-  h1 {
-    font-size: 3rem;
-  }
-  h2 {
-    font-size: 2.5rem;
-  }
-  h3 {
-    font-size: 2rem;
-  }
-  h4 {
-    font-size: 1.5rem;
-  }
-}
-
-/* Medium devices (600px–1200px) */
-@media only screen and (min-width: 600px) and (max-width: 1200px) {
-  /* CSS VARIABLES */
-  :root {
-    --pad-sm: 0.75rem;
-    --pad-md: 1rem;
-    --pad-lg: 1.5rem;
-    --pad-xl: 2rem;
-
-    --gap-sm: 0.75rem;
-    --gap-md: 1rem;
-    --gap-lg: 1.5rem;
-    --gap-xl: 2rem;
-  }
-
-  /* TYPOGRAPHY */
-  h1 {
-    font-size: 2rem;
-  }
-  h2 {
-    font-size: 1.75rem;
-  }
-  h3 {
-    font-size: 1.5rem;
-  }
-  h4 {
-    font-size: 1.25rem;
-  }
-}
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  /* CSS VARIABLES */
-  :root {
-    --pad-sm: 0.75rem;
-    --pad-md: 1rem;
-    --pad-lg: 1.5rem;
-    --pad-xl: 2rem;
-
-    --gap-sm: 0.75rem;
-    --gap-md: 1rem;
-    --gap-lg: 1.5rem;
-    --gap-xl: 2rem;
-  }
-
-  /* TYPOGRAPHY */
-  h1 {
-    font-size: 2rem;
-  }
-  h2 {
-    font-size: 1.75rem;
-  }
-  h3 {
-    font-size: 1.5rem;
-  }
-  h4 {
-    font-size: 1.25rem;
-  }
-}
-
-/* COLORS */
 :root {
-  --gray-100: #e2e2e2;
+  /* TYPOGRAPHY */
+  --font-size-h1: clamp(2rem, 1.636rem + 1.818vw, 3rem);
+  --font-size-h2: clamp(1.75rem, 1.477rem + 1.364vw, 2.5rem);
+  --font-size-h3: clamp(1.5rem, 1.318rem + 0.909vw, 2rem);
+  --font-size-h4: clamp(1.25rem, 1.159rem + 0.455vw, 1.5rem);
+  --font-size-h5: clamp(1.125rem, 1.034rem + 0.455vw, 1.25rem);
+  --font-size-h6: clamp(1rem, 0.955rem + 0.227vw, 1.125rem);
 
-  --red-100: #fdf7f7;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: clamp(1.0625rem, 1rem + 0.25vw, 1.125rem);
+  --font-size-xl: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);
+  --font-size-2xl: clamp(1.25rem, 1rem + 1vw, 1.5rem);
+  --font-size-3xl: clamp(1.5rem, 1.125rem + 1.5vw, 1.875rem);
+  --font-size-4xl: clamp(1.75rem, 1.25rem + 2vw, 2.25rem);
+  --font-size-5xl: clamp(2rem, 1.5rem + 2vw, 3rem);
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-heading: 1.15;
+  --line-height-subheading: 1.25;
+  --line-height-body: 1.5;
+  --line-height-relaxed: 1.7;
+
+  --font-body: var(--font-lora), serif;
+  --font-heading: var(--font-archivo), sans-serif;
+  --font-label: var(--font-ibm-plex-mono), monospace;
+  --font-code: var(--font-ibm-plex-mono), monospace;
+
+  /* SPACING */
+  --space-xxs: 0.25rem; /* 4px */
+  --space-xs: 0.5rem; /* 8px */
+  --space-sm: 0.75rem; /* 12px */
+  --space-md: 1rem; /* 16px */
+  --space-lg: 1.5rem; /* 24px */
+  --space-xl: 2rem; /* 32px */
+  --space-2xl: 3rem; /* 48px */
+  --space-3xl: 4rem; /* 64px */
+  --space-4xl: 6rem; /* 96px */
+
+  --space-fluid-sm: clamp(1rem, calc(0.727rem + 1.364vw), 1.75rem);
+  --space-fluid-lg: clamp(2rem, calc(0.909rem + 5.455vw), 5rem);
+
+  /* RADII */
+  --radius-none: 0;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* COLORS */
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  --color-gray-950: #2c2c2c;
+  --color-gray-800: #454545;
+  --color-gray-700: #595959;
+  --color-gray-500: #808080;
+  --color-gray-300: #d1d1d1;
+  --color-gray-100: #f5f5f5;
+
+  --color-lavender-100: #b39cd0;
+  --color-lavender-700: #654a85;
+
+  --color-teal-100: #a8dadc;
+  --color-teal-700: #27686b;
+
+  --color-pink-100: #ffc1cc;
+  --color-pink-700: #9b4058;
+}
+
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+
+  --color-text: var(--color-black);
+  --color-heading: var(--color-black);
+  --color-background: var(--color-white);
+
+  --color-border: var(--color-gray-300);
+  --color-border-strong: var(--color-gray-500);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-text: var(--color-gray-100);
+  --color-heading: var(--color-gray-100);
+  --color-background: var(--color-gray-950);
+}
+
+h1 {
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-heading);
+  font-family: var(--font-heading);
+}
+h2 {
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-heading);
+  font-family: var(--font-heading);
+}
+h3 {
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-subheading);
+  font-family: var(--font-heading);
+}
+h4 {
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-subheading);
+  font-family: var(--font-heading);
+}
+h5 {
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-h5);
+  line-height: 1.3;
+  font-family: var(--font-heading);
+}
+h6 {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-h6);
+  line-height: 1.3;
+  font-family: var(--font-heading);
+}
+body {
+  line-height: var(--line-height-body);
+  font-family: var(--font-body);
+}
+code,
+pre {
+  font-family: var(--font-code);
 }
 
 /* BUTTON */
-button {
-  width: fit-content;
-  padding: 5px 15px;
+button,
+a.btn {
   border: none;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  font-family: var(--font-ibm-plex-mono);
+  border-radius: var(--radius-full);
+  padding: var(--spacing-2) var(--spacing-4);
+  width: fit-content;
+  font-size: var(--font-size-xs);
+  font-family: var(--font-label);
+  text-decoration: none;
   text-transform: uppercase;
+}
+
+button:hover,
+a.btn:hover {
+  text-decoration: none;
 }
 
 /* IMAGES */
