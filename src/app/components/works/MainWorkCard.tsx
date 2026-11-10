@@ -24,11 +24,11 @@ export default function MainWorkCard({
     <article className={`${styles["main-work-card"]} flex`}>
       <img src={image} alt="" />
       <div className={`${styles["main-work-card__content"]}`}>
-        <p className="ibm-plex-mono uppercase-text">{release_status}</p>
+        <p className="text-label">{release_status}</p>
         <h3>{title}</h3>
         <p>{short_description}</p>
         <div className="lang-tags">{languages}</div>
-        <Link href={`/works/${slug}`} className="btn dark-bg light-text">
+        <Link href={`/works/${slug}`} className="btn btn--primary">
           See details
         </Link>
       </div>

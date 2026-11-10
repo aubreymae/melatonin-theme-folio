@@ -44,7 +44,6 @@ svg {
 /* 7. Inherit fonts for form controls */
 input,
 button,
-a.btn,
 textarea,
 select {
   font: inherit;

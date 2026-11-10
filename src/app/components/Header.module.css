@@ -2,11 +2,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: var(--space-md) 0;
 }
 
 .header-nav-items {
   display: flex;
+  gap: var(--space-md);
   list-style-type: none;
+}
+
+.amg-logo {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-lg);
+  font-family: var(--font-heading);
 }
 
 /* Medium devices (600px–1200px) */

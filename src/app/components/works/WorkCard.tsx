@@ -24,10 +24,10 @@ export default function WorkCard({
       <img src={image} alt="" />
       <div className={`${styles["work-card__content"]}`}>
         <h4>{title}</h4>
-        <p className="ibm-plex-mono uppercase-text">{release_status}</p>
+        <p className="text-label">{release_status}</p>
         <p>{short_description}</p>
         <div className="lang-tags"></div>
-        <Link href={`/works/${slug}`} className="btn dark-bg light-text">
+        <Link href={`/works/${slug}`} className="btn btn--primary">
           See details
         </Link>
       </div>

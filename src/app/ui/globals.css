@@ -74,6 +74,9 @@
 
   --color-pink-100: #ffc1cc;
   --color-pink-700: #9b4058;
+
+  /* ANIMATION */
+  --simple-transition: 0.3s ease;
 }
 
 :root,
@@ -86,6 +89,9 @@
 
   --color-border: var(--color-gray-300);
   --color-border-strong: var(--color-gray-500);
+
+  --color-btn-background: var(--color-black);
+  --color-btn-text-label: var(--color-white);
 }
 
 [data-theme="dark"] {
@@ -142,11 +148,10 @@ pre {
 }
 
 /* BUTTON */
-button,
-a.btn {
+button {
   border: none;
   border-radius: var(--radius-full);
-  padding: var(--spacing-2) var(--spacing-4);
+  padding: var(--space-xs) var(--space-md);
   width: fit-content;
   font-size: var(--font-size-xs);
   font-family: var(--font-label);
@@ -154,8 +159,7 @@ a.btn {
   text-transform: uppercase;
 }
 
-button:hover,
-a.btn:hover {
+button:hover {
   text-decoration: none;
 }
 

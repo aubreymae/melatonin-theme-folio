@@ -35,9 +35,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${archivo.variable} ${lora.variable} ${ibm_plex_mono.variable}`}
     >
       <body>
-        <Header />
-        {children}
-        <Footer />
+        <div className="site-layout">
+          <Header />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

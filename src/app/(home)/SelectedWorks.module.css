@@ -2,13 +2,13 @@
 .general-layout--select-works {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-xl);
+  gap: var(--space-lg);
 }
 
 .general-layout--select-works-list {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xl);
+  gap: var(--space-lg);
 }
 
 /* Medium */
@@ -16,7 +16,7 @@
   .general-layout--select-works-list {
     flex-direction: row;
     align-items: start;
-    gap: var(--space-xl);
+    gap: var(--space-lg);
   }
 
   .general-layout--select-works-list article {

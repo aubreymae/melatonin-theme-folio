@@ -9,16 +9,24 @@ export default function Header() {
         <nav className={styles["header-nav"]}>
           <ul className={styles["header-nav-items"]}>
             <li>
-              <Link href="/">Home</Link>
+              <Link href="/" className="btn btn--primary">
+                Home
+              </Link>
             </li>
             <li>
-              <Link href="/works">Works</Link>
+              <Link href="/works" className="btn btn--primary">
+                Works
+              </Link>
             </li>
             <li>
-              <Link href="/resume">Resume</Link>
+              <Link href="/resume" className="btn btn--primary">
+                Resume
+              </Link>
             </li>
             <li>
-              <Link href="/contact">Contact</Link>
+              <Link href="/contact" className="btn btn--primary">
+                Contact
+              </Link>
             </li>
           </ul>
         </nav>
