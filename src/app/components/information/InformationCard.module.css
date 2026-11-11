@@ -2,13 +2,16 @@
   list-style-type: none;
 }
 
-.info-card-label {
-  font-family: var(--font-label);
+.info-card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   font-size: var(--font-size-sm);
+  font-family: var(--font-label);
   text-transform: uppercase;
 }
 
 .info-card-body {
-  font-family: var(--font-heading);
   font-weight: var(--font-weight-medium);
+  font-family: var(--font-heading);
 }

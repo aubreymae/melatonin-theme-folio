@@ -21,10 +21,26 @@ export default function About() {
       </div>
       <div className="general-layout__right">
         <div className="simple-card">
-          <InformationCard label={"Currently"} body={personal.current} />
-          <InformationCard label={"Education"} body={personal.education} />
-          <InformationCard label={"Based in"} body={personal.based_in} />
-          <InformationCard label={"Open to"} body={personal.open_to} />
+          <InformationCard
+            label={"Currently"}
+            body={personal.current}
+            dates={""}
+          />
+          <InformationCard
+            label={"Education"}
+            body={personal.education}
+            dates={""}
+          />
+          <InformationCard
+            label={"Based in"}
+            body={personal.based_in}
+            dates={""}
+          />
+          <InformationCard
+            label={"Open to"}
+            body={personal.open_to}
+            dates={""}
+          />
         </div>
       </div>
     </section>

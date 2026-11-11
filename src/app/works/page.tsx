@@ -6,17 +6,9 @@ export default function Works() {
 
   return (
     <main className="container">
-      <div
-        className="flex btm-margin"
-        style={
-          {
-            flexDirection: "column",
-            "--gap": "1rem",
-          } as React.CSSProperties
-        }
-      >
+      <div className="general-section-layout">
         <h1>All Works</h1>
-        <div className="grid grid-col-2">
+        <div className="general-section-layout--works-list">
           {featuredWorks.map((work) => (
             <WorkCard
               key={work.slug}

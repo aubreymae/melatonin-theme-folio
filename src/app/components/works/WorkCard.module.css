@@ -2,21 +2,29 @@
 .work-card {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: stretch;
   gap: var(--space-md);
-  padding: var(--space-sm);
   border: solid 1px var(--color-border);
+  padding: var(--space-sm);
 }
 
 .work-card__content {
   display: flex;
-  flex-direction: column;
+  flex: 1;
   gap: var(--space-md);
 }
 
-.work-card img {
+.work-card__image {
+  flex: 0 0 auto;
+  aspect-ratio: 16 / 9;
   width: 100%;
-  height: 100%;
+  overflow: hidden;
+}
+
+.work-card__languages {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-xs);
 }
 
 /* Medium devices (600px–1200px) */
@@ -24,6 +32,7 @@
   .work-card {
     display: flex;
     flex-direction: column;
+    align-items: stretch;
     gap: var(--space-md);
   }
 

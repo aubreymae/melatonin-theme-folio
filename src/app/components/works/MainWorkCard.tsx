@@ -20,6 +20,12 @@ export default function MainWorkCard({
   languages,
   image,
 }: MainWorkCardProps) {
+  const allLanguages = languages.map((lang) => (
+    <span key={lang} className="language-tags">
+      {lang}
+    </span>
+  ));
+
   return (
     <article className={`${styles["main-work-card"]} flex`}>
       <img src={image} alt="" />
@@ -27,7 +33,9 @@ export default function MainWorkCard({
         <p className="text-label">{release_status}</p>
         <h3>{title}</h3>
         <p>{short_description}</p>
-        <div className="lang-tags">{languages}</div>
+        <div className={styles["main-work-card__languages"]}>
+          {allLanguages}
+        </div>
         <Link href={`/works/${slug}`} className="btn btn--primary">
           See details
         </Link>

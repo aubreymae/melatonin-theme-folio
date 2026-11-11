@@ -19,6 +19,13 @@
   text-transform: uppercase;
 }
 
+.main-work-card__languages {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
 /* Medium devices (600px–1200px) */
 @media (min-width: 48rem) {
   .main-work-card {
